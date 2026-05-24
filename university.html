@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University — Preksha Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-page { padding: 64px 48px 80px; }
+    .page-header { margin-bottom: 56px; }
+
+    .masonry {
+      columns: 3;
+      column-gap: 14px;
+    }
+
+    .masonry .card {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .masonry .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .masonry .card:hover img { transform: scale(1.03); }
+
+    @media (max-width: 900px) {
+      .masonry { columns: 2; }
+      .gallery-page { padding: 40px 20px 60px; }
+    }
+
+    @media (max-width: 560px) {
+      .masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Preksha Gautam</a>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="digital-media.html">Digital Media</a></li>
+    <li><a href="advertisement.html">Advertisement</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="gallery-page">
+    <div class="page-header fade-up">
+      <p class="section-subtitle">Portfolio</p>
+      <h1 class="section-title">University</h1>
+    </div>
+
+    <div class="masonry">
+      <div class="card fade-up" data-src="images/75f258364283eb2c1b19cf304962eedc.png">
+        <img src="images/75f258364283eb2c1b19cf304962eedc.png" alt="University 1" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/99ad01c469a88c528781bd6dd9795856.png">
+        <img src="images/99ad01c469a88c528781bd6dd9795856.png" alt="University 2" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/4ec5cc6c814e9b15ffbaeeaa9092132b.png">
+        <img src="images/4ec5cc6c814e9b15ffbaeeaa9092132b.png" alt="University 3" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/7bf8f8fb65ec4ed2c1e53a18726f5220.png">
+        <img src="images/7bf8f8fb65ec4ed2c1e53a18726f5220.png" alt="University 4" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/15a6b49dc2c87d9b1af7e4bab8dddf25.png">
+        <img src="images/15a6b49dc2c87d9b1af7e4bab8dddf25.png" alt="University 5" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/3e03aa3820b95f7dc02c14611cbd9538.png">
+        <img src="images/3e03aa3820b95f7dc02c14611cbd9538.png" alt="University 6" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/088df0117845ad410d0c4815c96efdda.jpg">
+        <img src="images/088df0117845ad410d0c4815c96efdda.jpg" alt="University 7" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/89b1ef0d0797b1bf5424088fad288d38.png">
+        <img src="images/89b1ef0d0797b1bf5424088fad288d38.png" alt="University 8" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/5ed022a42038204eea7ce5ffe772e945.png">
+        <img src="images/5ed022a42038204eea7ce5ffe772e945.png" alt="University 9" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/34823000889aeb3d929a19192740b07e.png">
+        <img src="images/34823000889aeb3d929a19192740b07e.png" alt="University 10" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/5393ed3c51c904a53229bf34e62588fc.png">
+        <img src="images/5393ed3c51c904a53229bf34e62588fc.png" alt="University 11" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Enlarged view" />
+</div>
+
+<footer>
+  <p>&copy; 2026 Preksha Gautam &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

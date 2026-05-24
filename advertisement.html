@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advertisement — Preksha Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-page { padding: 64px 48px 80px; }
+    .page-header { margin-bottom: 56px; }
+
+    .masonry {
+      columns: 3;
+      column-gap: 14px;
+    }
+
+    .masonry .card {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .masonry .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .masonry .card:hover img { transform: scale(1.03); }
+
+    @media (max-width: 900px) {
+      .masonry { columns: 2; }
+      .gallery-page { padding: 40px 20px 60px; }
+    }
+
+    @media (max-width: 560px) {
+      .masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Preksha Gautam</a>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="digital-media.html">Digital Media</a></li>
+    <li><a href="advertisement.html">Advertisement</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="gallery-page">
+    <div class="page-header fade-up">
+      <p class="section-subtitle">Portfolio</p>
+      <h1 class="section-title">Advertisement</h1>
+    </div>
+
+    <div class="masonry">
+      <div class="card fade-up" data-src="images/ca7c1c0b2ee7d8a768e031bb55cab482.png">
+        <img src="images/ca7c1c0b2ee7d8a768e031bb55cab482.png" alt="Advertisement 1" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/6e3c3e6004ec9934734ee32e25c21f67.png">
+        <img src="images/6e3c3e6004ec9934734ee32e25c21f67.png" alt="Advertisement 2" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/81f9cf1b9198a37bafe40e11dfec7302.jpg">
+        <img src="images/81f9cf1b9198a37bafe40e11dfec7302.jpg" alt="Advertisement 3" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/0a66e2a609d7f384eaf9c9a052542ea4.png">
+        <img src="images/0a66e2a609d7f384eaf9c9a052542ea4.png" alt="Advertisement 4" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/986a04101fb3194b36cc81667623ac72.png">
+        <img src="images/986a04101fb3194b36cc81667623ac72.png" alt="Advertisement 5" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/a087474b6878eaab2e2e8a724f39e6e5.png">
+        <img src="images/a087474b6878eaab2e2e8a724f39e6e5.png" alt="Advertisement 6" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/7511e77fc19a32ec0371a8e8cf699f26.png">
+        <img src="images/7511e77fc19a32ec0371a8e8cf699f26.png" alt="Advertisement 7" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Enlarged view" />
+</div>
+
+<footer>
+  <p>&copy; 2026 Preksha Gautam &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

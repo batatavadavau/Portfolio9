@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Preksha Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-page {
+      padding: 64px 48px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-header { margin-bottom: 64px; }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* FACE PAINTING GALLERY */
+    .fp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .fp-grid .card {
+      grid-column: span 1;
+    }
+
+    .fp-grid .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+
+    /* CONTACT INFO */
+    .contact-info-side {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .contact-info-side .section-subtitle { margin-bottom: 8px; }
+
+    .contact-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ci-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .ci-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--fg);
+    }
+
+    .ci-value a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      transition: color 0.2s;
+    }
+
+    .ci-value a:hover { color: var(--accent2); }
+
+    .contact-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .fp-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 960px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-page { padding: 40px 24px 60px; }
+    }
+
+    @media (max-width: 560px) {
+      .fp-grid .card img { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Preksha Gautam</a>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="digital-media.html">Digital Media</a></li>
+    <li><a href="advertisement.html">Advertisement</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="contact-page">
+    <div class="page-header fade-up">
+      <p class="section-subtitle">Get in Touch</p>
+      <h1 class="section-title">Contact</h1>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- FACE PAINTING -->
+      <div class="fade-up">
+        <p class="fp-label">Face Painting</p>
+        <div class="fp-grid">
+          <div class="card" data-src="images/Preksha_Gautam__7_.png">
+            <img src="images/Preksha_Gautam__7_.png" alt="Face Paint 1" loading="lazy" />
+          </div>
+          <div class="card" data-src="images/Preksha_Gautam__6_.png">
+            <img src="images/Preksha_Gautam__6_.png" alt="Face Paint 2" loading="lazy" />
+          </div>
+          <div class="card" data-src="images/Preksha_Gautam__5_.png">
+            <img src="images/Preksha_Gautam__5_.png" alt="Face Paint 3" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info-side fade-up">
+        <div>
+          <p class="section-subtitle">Let's work together</p>
+          <h2 class="section-title" style="font-size: clamp(1.8rem,3vw,2.8rem);">Say Hello</h2>
+        </div>
+
+        <p class="contact-desc">
+          Available for freelance graphic design projects, branding, event posters, and digital media work.
+        </p>
+
+        <div class="contact-divider"></div>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <span class="ci-label">LinkedIn</span>
+            <span class="ci-value">
+              <a href="https://www.linkedin.com/in/prekshagautam/" target="_blank" rel="noopener">
+                @prekshagautam
+              </a>
+            </span>
+          </div>
+          <div class="contact-item">
+            <span class="ci-label">Based In</span>
+            <span class="ci-value">Rajasthan, India</span>
+          </div>
+          <div class="contact-item">
+            <span class="ci-label">E-Mail</span>
+            <span class="ci-value">
+              <a href="mailto:gautampreksha605@gmail.com" target="_blank" rel="noopener">
+                gautampreksha605@gmail.com
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Enlarged view" />
+</div>
+
+<footer>
+  <p>&copy; 2026 Preksha Gautam &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

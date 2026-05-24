@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Media — Preksha Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-page { padding: 64px 48px 80px; }
+
+    .page-header { margin-bottom: 56px; }
+
+    .masonry {
+      columns: 3;
+      column-gap: 14px;
+    }
+
+    .masonry .card {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .masonry .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .masonry .card:hover img { transform: scale(1.03); }
+
+    @media (max-width: 900px) {
+      .masonry { columns: 2; }
+      .gallery-page { padding: 40px 20px 60px; }
+    }
+
+    @media (max-width: 560px) {
+      .masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Preksha Gautam</a>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="digital-media.html">Digital Media</a></li>
+    <li><a href="advertisement.html">Advertisement</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="gallery-page">
+    <div class="page-header fade-up">
+      <p class="section-subtitle">Portfolio</p>
+      <h1 class="section-title">Digital Media</h1>
+    </div>
+
+    <div class="masonry">
+      <div class="card fade-up" data-src="images/0d0d2ca04bdacd667583e47f7083e30b.png">
+        <img src="images/0d0d2ca04bdacd667583e47f7083e30b.png" alt="Digital Media 1" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/Preksha_Gautam__4_.png">
+        <img src="images/Preksha_Gautam__4_.png" alt="Digital Media 2" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/c2c02efd297bd6fee5ed1f51fc0dbb59.png">
+        <img src="images/c2c02efd297bd6fee5ed1f51fc0dbb59.png" alt="Digital Media 3" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/dbdd22f0df415629598dbbbff40e48df.png">
+        <img src="images/dbdd22f0df415629598dbbbff40e48df.png" alt="Digital Media 4" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/7c8f04b7135cae19f54c8704c88e3990.png">
+        <img src="images/7c8f04b7135cae19f54c8704c88e3990.png" alt="Digital Media 5" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/dab7fb302654c3a06fd1def9e8aa1966.png">
+        <img src="images/dab7fb302654c3a06fd1def9e8aa1966.png" alt="Digital Media 6" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/Preksha_Gautam__3_.png">
+        <img src="images/Preksha_Gautam__3_.png" alt="Digital Media 7" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/917d1deacd4044e5db767b80b65560fe.png">
+        <img src="images/917d1deacd4044e5db767b80b65560fe.png" alt="Digital Media 8" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/9121f64850207dc2e35a19817ef6d308.png">
+        <img src="images/9121f64850207dc2e35a19817ef6d308.png" alt="Digital Media 9" loading="lazy" />
+      </div>
+      <div class="card fade-up" data-src="images/febf7251173f84bae44f5edbf2f34b4e.png">
+        <img src="images/febf7251173f84bae44f5edbf2f34b4e.png" alt="Digital Media 10" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Enlarged view" />
+</div>
+
+<footer>
+  <p>&copy; 2026 Preksha Gautam &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

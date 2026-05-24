@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preksha Gautam - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      position: relative;
+      height: calc(100vh - var(--nav-h));
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(26, 26, 26, 0.75) 0%,
+        rgba(26, 26, 26, 0.2) 50%,
+        transparent 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 64px 56px;
+      color: #fff;
+      max-width: 700px;
+    }
+
+    .hero-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-name {
+      font-family: 'Italiana', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      max-width: 460px;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.6s forwards;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 1px solid rgba(255,255,255,0.6);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: background 0.3s, border-color 0.3s;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.8s forwards;
+    }
+
+    .hero-cta:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* MARQUEE */
+    .marquee-wrap {
+      overflow: hidden;
+      background: var(--fg);
+      padding: 14px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 48px;
+      animation: marquee 18s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee-track span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .marquee-track .dot {
+      color: rgba(255,255,255,0.3);
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* FEATURED STRIP */
+    .featured {
+      padding: 80px 48px;
+    }
+
+    .featured-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .featured-header a {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      grid-template-rows: 340px;
+      gap: 12px;
+    }
+
+    .featured-grid .card:first-child {
+      grid-row: span 1;
+    }
+
+    .featured-grid .card img {
+      height: 340px;
+    }
+
+    /* NAV CATEGORIES */
+    .categories {
+      padding: 64px 48px;
+      background: var(--light);
+    }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .cat-item {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+    }
+
+    .cat-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      filter: brightness(0.65);
+    }
+
+    .cat-item:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.5);
+    }
+
+    .cat-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .cat-label span {
+      font-family: 'Italiana', serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.06em;
+    }
+
+    .cat-label small {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(28px); }
+    }
+
+    @media (max-width: 900px) {
+      .featured-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .featured-grid .card img { height: 260px; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-content { padding: 40px 28px; }
+      .featured, .categories { padding: 56px 24px; }
+    }
+
+    @media (max-width: 600px) {
+      .featured-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Preksha Gautam</a>
+  <div class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="digital-media.html">Digital Media</a></li>
+    <li><a href="advertisement.html">Advertisement</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-img" src="images/6457333b673bd501d0f8f44edb373d42.jpg" alt="Preksha Gautam" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-name">Preksha<br>Gautam</h1>
+      <p class="hero-desc">Crafting visual stories through design - from university events to professional brands.</p>
+      <a class="hero-cta" href="digital-media.html">View Work</a>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Graphic Design</span><span class="dot">✦</span>
+      <span>Digital Media</span><span class="dot">✦</span>
+      <span>Advertisement</span><span class="dot">✦</span>
+      <span>Branding</span><span class="dot">✦</span>
+      <span>University Projects</span><span class="dot">✦</span>
+      <span>Face Painting</span><span class="dot">✦</span>
+      <span>Graphic Design</span><span class="dot">✦</span>
+      <span>Digital Media</span><span class="dot">✦</span>
+      <span>Advertisement</span><span class="dot">✦</span>
+      <span>Branding</span><span class="dot">✦</span>
+      <span>University Projects</span><span class="dot">✦</span>
+      <span>Face Painting</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="section-subtitle fade-up">Explore</div>
+    <h2 class="section-title fade-up">Categories</h2>
+    <div class="cat-grid">
+      <a class="cat-item fade-up" href="digital-media.html">
+        <img src="images/0d0d2ca04bdacd667583e47f7083e30b.png" alt="Digital Media" />
+        <div class="cat-label">
+          <span>Digital Media</span>
+          <small>10 pieces</small>
+        </div>
+      </a>
+      <a class="cat-item fade-up" href="advertisement.html">
+        <img src="images/ca7c1c0b2ee7d8a768e031bb55cab482.png" alt="Advertisement" />
+        <div class="cat-label">
+          <span>Advertisement</span>
+          <small>7 pieces</small>
+        </div>
+      </a>
+      <a class="cat-item fade-up" href="university.html">
+        <img src="images/75f258364283eb2c1b19cf304962eedc.png" alt="University" />
+        <div class="cat-label">
+          <span>University</span>
+          <small>11 pieces</small>
+        </div>
+      </a>
+      <a class="cat-item fade-up" href="contact.html">
+        <img src="images/Preksha_Gautam__7_.png" alt="Contact" />
+        <div class="cat-label">
+          <span>Contact</span>
+          <small>Get in touch</small>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Preksha Gautam &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

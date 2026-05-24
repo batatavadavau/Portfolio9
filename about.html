@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Preksha Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-wrap {
+      min-height: calc(100vh - var(--nav-h));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .about-img-side {
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+    }
+
+    .about-img-side img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about-content-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 72px;
+    }
+
+    .about-content-side .section-subtitle {
+      margin-bottom: 10px;
+    }
+
+    .about-title {
+      font-family: 'Italiana', serif;
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: 0.03em;
+      margin-bottom: 40px;
+      color: var(--fg);
+    }
+
+    .about-bio {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      font-weight: 300;
+      line-height: 1.85;
+      color: #333;
+      max-width: 480px;
+      margin-bottom: 40px;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 18px;
+      border: 1px solid var(--accent);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border-radius: 2px;
+    }
+
+    .about-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin: 36px 0;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      text-align: left;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--fg);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .about-wrap {
+        grid-template-columns: 1fr;
+      }
+      .about-img-side {
+        height: 55vw;
+        min-height: 300px;
+        position: relative;
+      }
+      .about-content-side {
+        padding: 48px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Preksha Gautam</a>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="digital-media.html">Digital Media</a></li>
+    <li><a href="advertisement.html">Advertisement</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="about-wrap">
+    <!-- IMAGE -->
+    <div class="about-img-side fade-up">
+      <img src="images/16844e723aeb1322a7c722ffb83ba867.jpg" alt="Preksha Gautam" />
+    </div>
+
+    <!-- TEXT -->
+    <div class="about-content-side">
+      <p class="section-subtitle fade-up">Who I Am</p>
+      <h1 class="about-title fade-up">About<br>Me</h1>
+
+      <p class="about-bio fade-up">
+        I start graphic designing as initial for university fest. Now, I do it professionally and it's the best job I've ever had.
+      </p>
+
+      <div class="about-divider fade-up"></div>
+
+      <div class="about-tags fade-up">
+        <span class="tag">Graphic Design</span>
+        <span class="tag">Digital Media</span>
+        <span class="tag">Branding</span>
+        <span class="tag">Advertisement</span>
+        <span class="tag">Event Design</span>
+      </div>
+
+      <div class="about-stats fade-up">
+        <div class="stat-item">
+          <div class="stat-num">150+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Creativity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Preksha Gautam &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
